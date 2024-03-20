@@ -1,18 +1,21 @@
 import argparse
 import logging
 
+from cores.mcmt_tracker import TrackerV0
 from utils.functions import set_logging
 
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--path_video_main',
-                        default='/media/manu/data/videos/vlc-record-2024-03-19-11h48m04s-rtsp___192.168.1.64_h264_ch1_main_av_stream-.avi')
+    parser.add_argument('--path_video_main', default='/media/manu/data/videos/mcmt_main.mp4')
+    parser.add_argument('--path_video_aux', default='/media/manu/data/videos/mcmt_aux.avi')
     return parser.parse_args()
 
 
 def run(args):
     logging.info(args)
+    mcmt_tracker_obj = TrackerV0(args.path_video_main, args.path_video_aux)
+    mcmt_tracker_obj.run()
 
 
 def main():
