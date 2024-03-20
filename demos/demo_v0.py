@@ -1,7 +1,7 @@
 import argparse
 import logging
 
-from utils.utils import set_logging
+from utils.functions import set_logging
 
 
 def parse_args():
