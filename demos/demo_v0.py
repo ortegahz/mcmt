@@ -7,8 +7,8 @@ from utils.functions import set_logging
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--path_video_main', default='/media/manu/data/videos/mcmt_main.mp4')
-    parser.add_argument('--path_video_aux', default='/media/manu/data/videos/mcmt_aux.avi')
+    parser.add_argument('--path_video_main', default='/media/manu/data/videos/mcmt_main_fps25.mp4')
+    parser.add_argument('--path_video_aux', default='/media/manu/data/videos/mcmt_aux_fps25.avi')
     return parser.parse_args()
 
 
